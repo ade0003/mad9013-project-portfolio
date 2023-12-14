@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-primary-dark;
+  }
+
+  html {
+    @apply font-body;
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h2 {
+    @apply text-3xl font-bold;
+  }
+  h3 {
+    @apply text-2xl font-bold uppercase;
+  }
+  h4 {
+    @apply text-xl font-bold;
+  }
+  h5 {
+    @apply text-lg font-bold;
+  }
+  h6 {
+    @apply text-base font-bold;
+  }
+
+  a {
+    @apply transition hover:text-primary-dark focus:text-primary-dark;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block  border-4 border-b-slate-950 bg-white px-[1.5em] py-[0.5em] text-center font-bold uppercase tracking-wider text-primary-dark no-underline transition hover:bg-primary-dark hover:text-white;
+  }
+
+  .btn--outline {
+    @apply bg-transparent text-secondary hover:border-secondary-dark hover:bg-secondary-dark hover:text-white focus:border-secondary-dark focus:bg-secondary-dark focus:text-white;
+  }
+}
